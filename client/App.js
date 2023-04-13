@@ -23,27 +23,27 @@ export default function App() {
               <Stack.Screen
                 name="Home"
                 component={Home}
-                options={{ headerLeft: null }}
+                options={{ headerLeft: null, headerShown: false }}
               />
               <Stack.Screen
                 name="Products"
                 component={Products}
-                options={{ headerLeft: null }}
+                options={{ headerLeft: null, headerShown: false }}
               />
               <Stack.Screen
                 name="Farmers"
                 component={Farmers}
-                options={{ headerLeft: null }}
+                options={{ headerLeft: null, headerShown: false }}
               />
               <Stack.Screen
                 name="Markets"
                 component={Markets}
-                options={{ headerLeft: null }}
+                options={{ headerLeft: null, headerShown: false }}
               />
               <Stack.Screen
                 name="Events"
                 component={Events}
-                options={{ headerLeft: null }}
+                options={{ headerLeft: null, headerShown: false }}
               />
             </Stack.Navigator>
           </View>
@@ -54,10 +54,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: "#fff",
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  // },
+  container: {
+    flex: 1,
+  },
 });

@@ -1,20 +1,61 @@
 import mongoose from "mongoose";
 
-const farmerSchema = new mongoose.Schema({
-  email: String,
-  password: String,
-  contactInfo: {
-    phone: Number,
-    email: String,
+const storeItemSchema = new mongoose.Schema({
+  item_name: {
+    type: String,
+    required: true,
   },
-  brand: String,
-  unique_id: { type: String, unique: true },
-  created_date: {
-    type: Date,
-    default: new Date(),
+  picture: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
   },
 });
 
-const farmerModel = mongoose.model("farmer", farmerSchema);
+const storeSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  brand: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  store_picture: {
+    type: String,
+    required: true,
+  },
+  contact_info: {
+    phone: {
+      type: Number,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+  },
+  store: {
+    type: [storeItemSchema],
+    required: true,
+  },
+});
 
-export default farmerModel;
+const Store = mongoose.model("farmers", storeSchema);
+
+export default Store;
