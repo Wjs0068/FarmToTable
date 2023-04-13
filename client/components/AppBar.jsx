@@ -31,7 +31,7 @@ const AppBar = () => {
   };
 
   return (
-    <Appbar.Header style={{ backgroundColor: "black" }}>
+    <Appbar.Header style={{ backgroundColor: 'transparent'}}>
       {isSearchVisible ? (
         <IconButton
           icon="arrow-left"

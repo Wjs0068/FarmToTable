@@ -1,10 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import Index from "./components/index";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+
 import { Provider as PaperProvider } from "react-native-paper";
 import { RecoilRoot } from "recoil";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import AppBarContainer from "./components/AppBarContainer";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Farmers from "./pages/Farmers";
@@ -18,7 +19,9 @@ export default function App() {
       <NavigationContainer>
         <RecoilRoot>
           <View style={styles.container}>
-            <Index />
+            <StatusBar hidden={true} />
+            {/* <AppBarContainer /> */}
+
             <Stack.Navigator>
               <Stack.Screen
                 name="Home"
@@ -56,5 +59,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: "100%",
   },
 });

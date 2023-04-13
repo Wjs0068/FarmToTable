@@ -18,7 +18,7 @@ const TopNav = () => {
     <Drawer.Section
       style={{
         display: menu ? "block" : "none",
-        width: "70%",
+        width: "100%",
         backgroundColor: "black",
         height: "100%",
       }}
