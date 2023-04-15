@@ -31,7 +31,7 @@ const AppBar = () => {
   };
 
   return (
-    <Appbar.Header style={{ backgroundColor: 'transparent'}}>
+    <Appbar.Header style={{ backgroundColor: "transparent" }}>
       {isSearchVisible ? (
         <IconButton
           icon="arrow-left"
@@ -57,11 +57,15 @@ const AppBar = () => {
           style={{ flex: 1 }}
         />
       ) : (
-        <Appbar.Action
-          color="white"
-          icon="magnify"
-          onPress={handleSearchPress}
-        />
+        <>
+          <Appbar.Action
+            color="white"
+            icon="magnify"
+            onPress={handleSearchPress}
+          />
+          <Appbar.Action color="white" icon="cart" onPress={() => {}} />
+          {/* Added shopping cart icon */}
+        </>
       )}
     </Appbar.Header>
   );
